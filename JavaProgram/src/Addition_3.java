@@ -1,0 +1,36 @@
+
+// The number is different in parameter
+
+class Ad {
+	
+	void sum () {
+		System.out.println("The sum of zero integer ");
+	}
+	
+	void sum (int x, int y) {
+		System.out.println("The sum of two integer = " +(x+y));
+	}
+	
+	void sum (int x, int y, int z) {
+		System.out.println("The sum of three integer = " +(x+y+z));
+	}
+	
+	void sum (int x, int y, int z, int a) {
+		System.out.println("The sum of four integer = " +(x+y+z+a));
+	}
+	
+}
+public class Addition_3 {
+
+	public static void main(String[] args) {
+		
+		Ad ram = new Ad();
+		ram.sum();               
+		ram.sum(10, 20);           //int x, int y Method calling
+		ram.sum(10,20, 30);        //int x, int y, int z
+		ram.sum(10, 20, 30, 40);   //int x, int y, int z, int a
+		
+
+	}
+
+}
