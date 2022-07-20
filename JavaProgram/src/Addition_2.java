@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 // The different order of parameter
 
@@ -21,10 +21,24 @@ public class Addition_2 {
 
 		Add sree = new Add();
 		
-		sree.sum(10, 10.5f);   //int x, float y    Method calling 
-		sree.sum(15.5f, 15);   //float x, int y
-		sree.sum(20.5f, 20);   //float x, int y
-		sree.sum(20, 10.5f);  //int x, float y
+		//sree.sum(10, 10.5f);   //int x, float y    Method calling 
+		//sree.sum(15.5f, 15);   //float x, int y
+		//sree.sum(20.5f, 20);   //float x, int y
+		//sree.sum(20, 10.5f);  //int x, float y
+		
+		//Create an object of Scanner 
+		Scanner sc = new Scanner(System.in);
+		
+		//Print two values of int x and float y 
+		System.out.println("Enter a value of x and y : ");
+		
+		sree.sum(sc.nextInt(), sc.nextFloat());
+		
+		
+		sc.close();
+		
+		
+		
 	}
 
 }

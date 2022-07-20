@@ -1,16 +1,15 @@
+import java.util.Scanner;
 
 class Examiner {
 	
-	
-	
-	//void hallticket() {
-	//System.out.println("Examiner will Check the Candidate 1.Name 2.Hallticket number 3.Course_details ");
-//}
+	void hallticket() {
+	System.out.println("Examination");
+     }
 	
 	//Method Overloading
 	
 	void hallticket(String verify1 ) {
-		System.out.println("Examiner will Check the Candidate "+verify1);
+		System.out.println("Examiner will Check the Candidate  : "+verify1);
 	}
 	 
 	//Method Overloading
@@ -27,7 +26,7 @@ class Examiner {
 	
 	
 	void takeanexampaper(String Course) {
-		System.out.println("Write an exam in " +Course);
+		System.out.println("Take an exam in " +Course);
 	}
 	
 	String examduration() {
@@ -35,7 +34,7 @@ class Examiner {
 	}
 	
 	String results (int totalmarks) {
-		System.out.println("Check your results is = "+totalmarks);
+		System.out.println("Check your Maths result is "+totalmarks+"/"+"100");
 		return "passed";
 	}
 	
@@ -49,22 +48,49 @@ public class Candidate {
 
 		//Creating an Object for an Examiner
 		Examiner durga = new Examiner();
-		    
-		
-	   
+		durga.hallticket();
+		   
 		// Examiner check only the Hallticket number 
-		durga.hallticket(" 1.Hallticket number ");  
-		
+		//durga.hallticket(" 1.Hallticket number ");  
 		//Examiner check only the two details to verify
-		durga.hallticket(" 1.Hallicket number ", " 2.image Verification");
-		
+		//durga.hallticket(" 1.Hallicket number ", " 2.image Verification");
 		//Examiner check all three details to verify
-		durga.hallticket(" 1.Hallticket number ", " 2.Name ", " 3.image Verification");   
+		//durga.hallticket(" 1.Hallticket number ", " 2.Name ", " 3.image Verification");   
 		
+	
 		
-		durga.takeanexampaper("Maths");
-		System.out.println("The exam duration is " +durga.examduration());
-		System.out.println("you are " +durga.results(98));
+	
+	         Scanner sc = new Scanner(System.in);
+	         
+	         System.out.println("Some Examiner verify one details at exam hall");
+	         
+	         System.out.println("Enter the Candidate only one verification details: ");
+	         
+	         //Examiner can check only the hallticket number
+	         durga.hallticket(sc.next());
+	         
+	         System.out.println("Some Examiner verify two details at exam hall");
+	         
+	         System.out.println("Enter the Candidate two verification details: ");
+	         
+	         //Examiner can check two verification
+	         durga.hallticket(sc.next(),sc.next());
+	         
+             System.out.println("Some Examiner verify three details at exam hall");
+	         
+	         System.out.println("Enter the Candidate three verification details: ");
+	         
+	         //Examiner can check two verification
+	         durga.hallticket(sc.next(),sc.next(), sc.next());
+	         
+	         durga.takeanexampaper("Maths");
+	         
+	         System.out.println("The exam duration is " +durga.examduration());
+	         
+	         System.out.println("Congratulation! you are " +durga.results(98));
+	         
+	         sc.close();
+	
 	}
 
 }

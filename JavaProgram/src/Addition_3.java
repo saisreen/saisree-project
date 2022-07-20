@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 // The number is different in parameter
 
@@ -12,7 +13,7 @@ class Ad {
 	}
 	
 	void sum (int x, int y, int z) {
-		System.out.println("The sum of three integer = " +(x+y+z));
+		System.out.println("x= "+x+", "+"y= "+y+", "+" z="+z+" The sum of three integer = " +(x+y+z));
 	}
 	
 	void sum (int x, int y, int z, int a) {
@@ -25,12 +26,37 @@ public class Addition_3 {
 	public static void main(String[] args) {
 		
 		Ad ram = new Ad();
-		ram.sum();               
-		ram.sum(10, 20);           //int x, int y Method calling
-		ram.sum(10,20, 30);        //int x, int y, int z
-		ram.sum(10, 20, 30, 40);   //int x, int y, int z, int a
+		//ram.sum();               
+		//ram.sum(10, 20);           //int x, int y Method calling
+		//ram.sum(10,20, 30);        //int x, int y, int z
+		//ram.sum(10, 20, 30, 40);   //int x, int y, int z, int a
 		
-
+		//Create an Object for Scanner
+		Scanner sc = new Scanner(System.in);
+		
+		//Print two values 
+		System.out.println("Enter a value of x = ");
+		
+		int s = sc.nextInt();
+		
+		System.out.println("Enter a value of y = ");
+		
+		int a = sc.nextInt();
+		
+		ram.sum(s, a);
+		
+		//Print three values
+		System.out.println("Enter a three values of x, y and z : ");
+		
+		ram.sum(sc.nextInt(), sc.nextInt(), sc.nextInt());
+		
+		//print four values
+		System.out.println("Enter a four values of x, y, z, a: ");
+		
+		ram.sum(sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt());
+		
+        sc.close();
+        
 	}
 
 }
