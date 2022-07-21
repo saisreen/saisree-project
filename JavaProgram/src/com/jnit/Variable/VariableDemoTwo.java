@@ -4,7 +4,7 @@ class Manager {
 		
 		int     mgr_id;                     //Instance variable
 	    String  mgr_dept;                  //Instance variable
-	    int   mgr_year_of_experience;    //Instance variable
+	    int   mgr_year_of_experience;     //Instance variable
 	    long  mgr_contact_number;        //Instance variable
         
 	    static String mgr_company;                         //Static variable

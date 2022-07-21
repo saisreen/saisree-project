@@ -20,7 +20,7 @@ class Doctor {
 		int    patient_contact_number;     //Instance variable
 		String patient_problem;          //Instance variable
 		
-		static String inpatient_hospital;               //Static variable
+		static String inpatient_hospital;              //Static variable
 		static String inpatient_workhours;            //static variable
 		
 	}
