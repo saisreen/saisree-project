@@ -2,7 +2,7 @@ package com.jnit.MethodOveridingExample;
 
 import java.util.Scanner;
 
-class laptop {              //super class
+class laptop {                //super class
 	
 	int price;
 	int discount;

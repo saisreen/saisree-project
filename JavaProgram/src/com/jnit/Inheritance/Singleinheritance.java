@@ -1,8 +1,8 @@
 package com.jnit.Inheritance;
 
 import java.util.Scanner;
-
-class parent {                  //super class
+ 
+class parent {                   //super class
 	
 	String Name;
 	

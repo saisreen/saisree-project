@@ -1,6 +1,6 @@
 package com.jnit.Inheritance;
 
-class flowers {                        //super class
+class flowers {                          //super class
 
 	void input() {
 		System.out.println("Flowers");

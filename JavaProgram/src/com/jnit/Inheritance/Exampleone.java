@@ -2,7 +2,7 @@ package com.jnit.Inheritance;
 
 import java.util.Scanner;
 
-class school {                      //super class
+class school {                         //super class
 	
 	int tutionfees;
 	int scholarship;
