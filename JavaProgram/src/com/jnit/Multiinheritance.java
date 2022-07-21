@@ -2,7 +2,7 @@ package com.jnit;
 
 import java.util.Scanner;
 
-class Electronics {  //super class
+class Electronics {             //super class
 	
 	void shop () {
 		System.out.println("Go to Electronics store ");
