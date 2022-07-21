@@ -1,3 +1,4 @@
+package com.jnit.Variable;
 
 class Manager {
 		

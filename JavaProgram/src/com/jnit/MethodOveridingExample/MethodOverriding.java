@@ -1,4 +1,4 @@
-package com.jnt;
+package com.jnit.MethodOveridingExample;
 
 import java.util.Scanner;
 
