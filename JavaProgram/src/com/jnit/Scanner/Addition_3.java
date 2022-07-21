@@ -1,7 +1,7 @@
 package com.jnit.Scanner;
 import java.util.Scanner;
 
-// The number is different in parameter
+ // The number is different in parameter
 
 class Ad {
 	

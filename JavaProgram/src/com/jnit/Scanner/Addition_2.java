@@ -1,7 +1,7 @@
 package com.jnit.Scanner;
 import java.util.Scanner;
 
-// The different order of parameter
+ // The different order of parameter
 
 class Add {
 	

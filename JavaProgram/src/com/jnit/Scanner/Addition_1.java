@@ -1,7 +1,7 @@
 package com.jnit.Scanner;
 import java.util.Scanner;
 
-// The different types of parameter
+ // The different types of parameter
 
 class Adds {
 	
