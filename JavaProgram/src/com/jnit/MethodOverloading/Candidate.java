@@ -7,7 +7,7 @@ class Examiner {
 	System.out.println("Examination");
      }
 	
-	//Method Overloading
+	 //Method Overloading
 	
 	void hallticket(String verify1 ) {
 		System.out.println("Examiner will Check the Candidate  : "+verify1);

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class Bank {
 	
-	//Method Overloading
+	 //Method Overloading
 	
 	void form (String form1, String form2) {
 		System.out.println("Collect the Application form "+form1+" or "+form2);
