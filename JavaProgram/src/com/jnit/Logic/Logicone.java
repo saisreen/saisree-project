@@ -1,4 +1,4 @@
-package com.jnit.String;
+package com.jnit.Logic;
 
 public class Logicone {
 
