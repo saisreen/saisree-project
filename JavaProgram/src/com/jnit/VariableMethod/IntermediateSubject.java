@@ -11,6 +11,7 @@ class MajorSubjects  {
 	
 	            //Instance method
 		void details(String College_name) {
+			System.out.println("   //  Yes, we can use a Static variable inside the instance methods   //");
 			System.out.println("The name of the Junior college is " +College_name);
 		}
 	
@@ -21,6 +22,7 @@ class MajorSubjects  {
 	
 	            //Static method 
 	static void subject1_name() {
+		System.out.println("   //  Yes, we can use a instance variable inside the static methods   //");
 		System.out.println("The first subject is maths");
 	}
 	
