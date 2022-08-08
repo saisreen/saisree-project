@@ -21,7 +21,7 @@ class Manager {
 		int    employee_contact_number;               //Instance variable
 		String employee_dept;                        //Instance variable
 		
-		static String employ_company;               //Static variable
+		static String employ_company =  "JNTU";             //Static variable
 		static int    employ_no_of_emp;            //static variable
 		
 		
@@ -71,7 +71,7 @@ public class VariableDemoTwo {
 		     sree.employee_contact_number = 987654321;     //assign a value of instance variable from Employee class
 		     sree.employee_dept = "Software Engineering";  //assign a value of instance variable from Employee class
 		     
-		     Employee.employ_company = "JNTU";  //assign a value of static variable from Employee class
+		     //Employee.employ_company = "JNTU";  //assign a value of static variable from Employee class
 		     Employee.employ_no_of_emp = 543;   //assign a value of static variable from Employee class
 		     
 		       System.out.println("Employee first name = " + sree.employee_first_name);

@@ -2,7 +2,7 @@ package com.jnit.Variable;
 
 class Doctor {
 		
-		int     physician_id;                     //Instance variable
+		int     physician_id;                  //Primitive Variable   //Instance variable
 	    double   physician_Year_of_experience;    //Instance variable
 	    long    physician_contact_number;       //Instance variable
         
@@ -31,7 +31,7 @@ class Doctor {
 		// TODO Auto-generated method stub
 
 		// Creating an object of doctor 
-		Doctor sreeja = new Doctor();
+		Doctor sreeja = new Doctor();   
 		
 		     sreeja.physician_id = 101;                         //assign a value of instance variable from doctor class       
 		     sreeja.physician_Year_of_experience = 9.5;        //assign a value of instance variable from doctor class  

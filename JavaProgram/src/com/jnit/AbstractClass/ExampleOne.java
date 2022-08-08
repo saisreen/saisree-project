@@ -4,7 +4,7 @@ abstract class Animal {
 	
 	abstract void lifespan();         //abstract method
 	
-	void breath() {
+	void breath() {                   
 		System.out.println(" All animals will breathe oxygen and releases carbon dioxide ");            //Concrete method 
 	}
 }

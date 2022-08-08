@@ -14,16 +14,11 @@ public class ArrayIndexOutOfBounds {
 		System.out.println(x[5]);
 		
 	}
-		
 		catch (Exception sai) {
 			sai.printStackTrace();
 		}
-		
 		System.out.println(x[0]);
 		System.out.println(x[-10]); 
-		
-
-
 	}
 
 }

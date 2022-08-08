@@ -2,15 +2,14 @@ package com.jnit.VariableMethod;
 
 class MajorSubjects  {
 
-    static String College_name;                      //static variable
+    static String College_name;      //Primitive type                 //static variable
     static int no_of_subjects;                      //Static vairable 
 	String subject1_name;                     //Instance variable
 	String Subject2_name;                     //Instance Variable
 	String Subject3_name;                     //Instance Variable
 	
-	
 	            //Instance method
-		void details(String College_name) {
+		void details(String College_name) {  //Method Declaration 
 			System.out.println("   //  Yes, we can use a Static variable inside the instance methods   //");
 			System.out.println("The name of the Junior college is " +College_name);
 		}
@@ -26,18 +25,15 @@ class MajorSubjects  {
 		System.out.println("The first subject is maths");
 	}
 	
-
 	           //Static method 
 	static void subject2_name() {
 		System.out.println("The second subject is physics");
 	}
-	
 	            //Static method 
 		static void subject3_name(String subject3_name) {
 			System.out.println("The Third subject is "+subject3_name);
 		}
 }
-
 public class IntermediateSubject {
 
 	public static void main(String[] args) {
@@ -45,7 +41,7 @@ public class IntermediateSubject {
 		
 		//created an object 
 				MajorSubjects sai = new MajorSubjects();
-				sai.details("NRI");
+				sai.details("NRI");            //Non - primitive type 
 				sai.info_sub(3);              // calling an instance method  
 				
 				//access the static method by using class name and without creating an Object. 
@@ -53,5 +49,4 @@ public class IntermediateSubject {
 				MajorSubjects.subject2_name();
 				MajorSubjects.subject3_name("chemistry");
 	}
-
 }

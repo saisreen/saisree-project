@@ -35,7 +35,7 @@ class Bank {
 		System.out.println("submitted the proof " +id1+","+id2+","+id3+" and "+id4);
 	}
 	
-	String passbook () {
+	String passbook () {    
 		return "201923467";
 	}
 	
@@ -54,14 +54,17 @@ public class Customer {
 		Bank Comerca = new Bank();
 		
 		Comerca.form("1.Savings Acoount ", "2.Current account ");     
-		Comerca.form();
+		Comerca.form();   //calling methods
 		
 				//submit only two proofs 
 				//Comerca.proof(" 1.Passport "," 2. Driver's License ");
+		
 				//submit all of these three proofs
 				//Comerca.proof(" 1.Passport ", " 2.Driver's License ", " 3.SSN ");
+		
 				//submit all of these four proofs 
-				//Comerca.proof(" 1.Passport ", " 2.Driver's License ", " 3.SSN ", " 4.Utility Bill ");                                                   
+				//Comerca.proof(" 1.Passport ", " 2.Driver's License ", " 3.SSN ", " 4.Utility Bill ");     
+		
 				//System.out.println("Bank gave " + Comerca.deposit(2000));                                        
 
 		//create an Object for Scanner 
@@ -77,13 +80,13 @@ public class Customer {
 		
 		System.out.println("Enter the first deposit amount = ");
 		
-		int Firstdeposit = sc.nextInt();
+	    int firstdeposit = sc.nextInt();
 		
 		System.out.println("Enter the second deposit amount = ");
 		
 		int Seconddeposit = sc.nextInt();
 		
-		Comerca.deposit(Firstdeposit, Seconddeposit);
+		Comerca.deposit(firstdeposit, Seconddeposit);
 		
 		sc.close();
 		

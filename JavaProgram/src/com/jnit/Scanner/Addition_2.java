@@ -35,7 +35,6 @@ public class Addition_2 {
 		
 		sree.sum(sc.nextInt(), sc.nextFloat());
 		
-		
 		sc.close();
 		
 		
