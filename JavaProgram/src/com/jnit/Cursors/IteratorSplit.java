@@ -24,6 +24,5 @@ public class IteratorSplit {
 		System.out.println("getExactSize = "+k.getExactSizeIfKnown());
 		System.out.println("Characteristics = "+k.hasCharacteristics(k.characteristics()));
 		
-	
 	}
 }

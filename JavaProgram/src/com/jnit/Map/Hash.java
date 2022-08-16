@@ -25,6 +25,8 @@ public class Hash {
 		h.put('C', 1.4); //duplicate key
 		h.put('X', 1.1);
 		System.out.println(h);
+		
+		hm.forEach((key,value)->System.out.println(key+" = " +value));
 
 	}
 

@@ -1,5 +1,8 @@
 package com.jnit.Map;
 
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class Tree {
@@ -16,6 +19,18 @@ public class Tree {
 		hm.put(3, "SSS");
 		hm.put(89, "rani");
 		System.out.println(hm);
+		Set<Entry<Integer, String > > se = hm.entrySet();
+		Iterator<Entry<Integer, String>> i = se.iterator();
+		while(i.hasNext()) {
+			Entry<Integer, String > ee = i.next();
+			System.out.println(ee.getKey());
+			System.out.println(ee.getValue());
+			
+		}
+		
+		
+		
+		
 		
 		TreeMap<Character, Double> h = new TreeMap <> ();  //Ascending order
 		h.put('A', 1.1); //duplicate value 
@@ -24,9 +39,10 @@ public class Tree {
 		h.put('D', 1.3);
 		h.put('C', 1.4); //duplicate key
 		h.put('X', 1.1);
-		System.out.println(h);
+		//System.out.println(h);
 
 
 	}
 
 }
+;

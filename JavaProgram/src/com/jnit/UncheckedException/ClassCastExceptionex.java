@@ -20,7 +20,7 @@ public class ClassCastExceptionex {
 		
 		try {
 		Employer sai = new Employer();
-		Employee sree = (Employee)sai;
+		Employee sri = (Employee)sai;
 	}
 		catch(Exception e ) {
 			e.printStackTrace();
