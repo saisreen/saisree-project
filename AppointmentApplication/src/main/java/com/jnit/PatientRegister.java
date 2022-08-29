@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class DoctorRegister extends HttpServlet {
+public class PatientRegister extends HttpServlet {
 	
 	Connection connection = null;
 	PreparedStatement ps = null;
@@ -34,26 +34,26 @@ public class DoctorRegister extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-      public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException  {
+      public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException  {
     	  String name = request.getParameter("name");
     	  String password = request.getParameter("password");
     	  String email = request.getParameter("email");
-    	  String specialisation = request.getParameter("specialisation");
+    	  String address = request.getParameter("address");
     	  String mobile = request.getParameter("xyz");
     	  long phone=Long.parseLong(mobile);
     	  PrintWriter pw=response.getWriter();
-    	  String sql="insert into doctor(name, password, email, phone, specialisation) values(?,?,?,?,?)";
+    	  String sql="insert into patient(name, password, email, phone, address) values(?,?,?,?,?)";
     	  try {
     	  ps=connection.prepareStatement(sql);
     	  ps.setString(1,name);
     	  ps.setString(2, password);
     	  ps.setString(3, email);
     	  ps.setLong(4, phone);
-    	  ps.setString(5, specialisation);
+    	  ps.setString(5, address);
     	  int x=ps.executeUpdate();
     	  //pw.println("<html><body bgcolor='wheat'><h1 align='center'>");
     	  if(x!=0)
-    		  response.sendRedirect("./doctor_login.html");
+    		  response.sendRedirect("./patient_login.html");
     		//  pw.println("Doctor Registered Successfully");
     	//  pw.println("</h1></body></html>");
     	  

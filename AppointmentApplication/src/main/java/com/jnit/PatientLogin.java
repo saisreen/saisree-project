@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.ServletConfig;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class DoctorRegister extends HttpServlet {
+public class PatientLogin extends HttpServlet {
 	
 	Connection connection = null;
 	PreparedStatement ps = null;
@@ -34,28 +35,21 @@ public class DoctorRegister extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-      public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException  {
-    	  String name = request.getParameter("name");
+      public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException  {
     	  String password = request.getParameter("password");
     	  String email = request.getParameter("email");
-    	  String specialisation = request.getParameter("specialisation");
-    	  String mobile = request.getParameter("xyz");
-    	  long phone=Long.parseLong(mobile);
     	  PrintWriter pw=response.getWriter();
-    	  String sql="insert into doctor(name, password, email, phone, specialisation) values(?,?,?,?,?)";
+    	  String sql="select * from patient where email=? and password=?";
     	  try {
     	  ps=connection.prepareStatement(sql);
-    	  ps.setString(1,name);
+    	  ps.setString(1, email);
     	  ps.setString(2, password);
-    	  ps.setString(3, email);
-    	  ps.setLong(4, phone);
-    	  ps.setString(5, specialisation);
-    	  int x=ps.executeUpdate();
+    	  ResultSet rs=ps.executeQuery();
     	  //pw.println("<html><body bgcolor='wheat'><h1 align='center'>");
-    	  if(x!=0)
-    		  response.sendRedirect("./doctor_login.html");
-    		//  pw.println("Doctor Registered Successfully");
-    	//  pw.println("</h1></body></html>");
+    	  if(rs.next())
+    		  response.sendRedirect("./patient_home.html");
+    		  //pw.println("Doctor Logged in Successfully");
+    	  //pw.println("</h1></body></html>");
     	  
       } catch (SQLException e) {
     	  e.printStackTrace();
