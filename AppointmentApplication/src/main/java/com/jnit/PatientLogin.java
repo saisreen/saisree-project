@@ -12,6 +12,7 @@ import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class PatientLogin extends HttpServlet {
 	
@@ -45,8 +46,11 @@ public class PatientLogin extends HttpServlet {
     	  ps.setString(1, email);
     	  ps.setString(2, password);
     	  ResultSet rs=ps.executeQuery();
+    	  HttpSession hs = request.getSession();
+    	  
     	  //pw.println("<html><body bgcolor='wheat'><h1 align='center'>");
     	  if(rs.next())
+    		  hs.setAttribute("id", rs.getInt(1));
     		  response.sendRedirect("./patient_home.html");
     		  //pw.println("Doctor Logged in Successfully");
     	  //pw.println("</h1></body></html>");

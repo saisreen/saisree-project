@@ -12,6 +12,7 @@ import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class DoctorLogin extends HttpServlet {
 	
@@ -46,11 +47,19 @@ public class DoctorLogin extends HttpServlet {
     	  ps.setString(2, password);
     	  ResultSet rs=ps.executeQuery();
     	  //pw.println("<html><body bgcolor='wheat'><h1 align='center'>");
-    	  if(rs.next())
+    	  //need to transfer the value
+    	  //create a session object
+    	  HttpSession hs = request.getSession();
+    	  if(rs.next()) {
+    		  hs.setAttribute("id", rs.getInt(1));
+    		  hs.setAttribute("name", rs.getString(2));
+    		  hs.setAttribute("specialisation", rs.getString("specialisation"));
+    		  hs.setAttribute("id", rs.getInt(1));
     		  response.sendRedirect("./doctor_home.html");
     		  //pw.println("Doctor Logged in Successfully");
     	  //pw.println("</h1></body></html>");
     	  
+    	  }
       } catch (SQLException e) {
     	  e.printStackTrace();
 }
