@@ -74,7 +74,7 @@ public class MethodOverriding {
 		
 		//Method Overriding
 				//Create an Object for Laptop
-				laptop x = new laptop();
+				laptop x = new laptop();   //upcasting
 				x.model();
 				x.price();
 				x.offer();

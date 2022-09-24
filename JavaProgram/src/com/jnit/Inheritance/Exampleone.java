@@ -31,16 +31,16 @@ class school {                         //super class
 	}
 }
 
-class amount extends school {        //sub  class
+class amount extends school {        //sub  class 
 	
-	int booksfees;
+	int booksfees;                  
 	
 	void bookamount() {
 		System.out.println("Enter a books fees = ");
 		booksfees=sc.nextInt();
 	}
 	
-	void totalamount() {
+	void totalamount() {             // reusing the properties of super class to sub class
 		System.out.println("Total amount of School fees = "+(tutionfees-scholarship+busfees+booksfees));
 	}
 }
