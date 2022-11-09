@@ -24,7 +24,8 @@ public class Vendor {
 	
 	@OneToMany(fetch=FetchType.LAZY, targetEntity=Customer.class,cascade=CascadeType.ALL)
 	@JoinColumn(name="venid", referencedColumnName="vid")
-	private Set cust;
+	private Set cust;  
+	
 
 	public int getVid() {
 		return vid;
@@ -42,13 +43,15 @@ public class Vendor {
 		this.vname = vname;
 	}
 
-	public Set getCust() {
-		return cust;
-	}
+	public Set getCust() {      //One to Many
+		return cust;            //One to Many
+	}                           //One to Many
 
-	public void setCust(Set cust) {
-		this.cust = cust;
-	}
+	public void setCust(Set cust) {   //One to Many
+		this.cust = cust;               //One to Many
+	}                                //One to Many
+	
+	   
 	
 	
 	

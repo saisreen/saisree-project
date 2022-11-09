@@ -25,34 +25,45 @@ public class MainLogic {
 		
 	    Transaction tx = se.beginTransaction();  // transaction is required because whenever we insert we need a transaction.
 	    
-	    Vendor v = new Vendor();
+	    Vendor v = new Vendor();     
 	    
-	    //v.setVid(101);
-	    //v.setVname("Amazon");
+	    //v.setVid(101);                
+	    //v.setVname("Amazon");          
 	    
-	    v.setVid(102);
-	    v.setVname("Flipkart");
+	    //v.setVid(102);                
+	    //v.setVname("Flipkart");     
 	    
-	    Customer sai = new Customer();
-	   // sai.setCid(201);
-	   // sai.setCname("sai sree");
-	    sai.setCid(203);
-	    sai.setCname("chinni");
+	    v.setVid(103);                
+	    v.setVname("Walmart"); 
 	    
-	    Customer sudha = new Customer();
-	    //sudha.setCid(202);
-	   // sudha.setCname("sudha Rani");
-	    sudha.setCid(204);
-	    sudha.setCname("valiveti");
+	    Customer sai = new Customer();    
+	    //sai.setCid(201);                   
+	   // sai.setCname("sai sree");           
+	    //sai.setCid(203);                     
+	    //sai.setCname("chinni");              
+	    sai.setCid(205);                     
+	    sai.setCname("Durga"); 
+	    
+	    Customer sudha = new Customer();   
+	    //sudha.setCid(202);                 
+	    //sudha.setCname("sudha Rani");      
+	    //sudha.setCid(204);                
+	    //sudha.setCname("valiveti");  
+	    sudha.setCid(206);                
+	    sudha.setCname("Narla"); 
+	    
 
-	    Set hs = new HashSet();
-	    hs.add(sai);
-	    hs.add(sudha);
+	    Set hs = new HashSet();   
+	    hs.add(sai);            
+	    hs.add(sudha);           
 	    
-	    v.setCust(hs);
-	    se.save(v);
+	    v.setCust(hs);               
+	    se.save(v);                 
 	    
-	    tx.commit();    
+	    tx.commit();                  
+	    
+	    
+	    
 		
 	}
 	}
