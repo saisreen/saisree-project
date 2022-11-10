@@ -28,7 +28,7 @@ public class MainLogic {
 	    sai.setMarks(456);
 	    
 	    Address a = new Address();
-	    a.setAdid(201);
+	    a.setAdid(201); 
 	    a.setPlace("Hyderabad");
 	    a.setObj(sai);
 	    
