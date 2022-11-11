@@ -9,7 +9,7 @@ public class MainLogic {
 		// TODO Auto-generated method stub
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-		Student sai= context.getBean(Student.class);
+		Student sai= context.getBean(Student.class); //Here we are getting object of student class from IOC Container using the getBean method.
 		System.out.println(sai.getSid()+" "+sai.getSname()+" "+sai.getMarks()+" "+sai.getBranch());
 		
 	}
