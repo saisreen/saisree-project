@@ -1,12 +1,23 @@
 package com.ex;
 
+import java.util.List;
+
+
 public class Student {
 	
 		private int sid;
 		private String sname;
 		private int marks;
 		private String branch;
+		private List course;
 		
+		
+		public List getCourse() {
+			return course;
+		}
+		public void setCourse(List course) {
+			this.course = course;
+		}
 		public int getSid() {
 			return sid;
 		}

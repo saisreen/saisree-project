@@ -10,10 +10,14 @@
 <property name="marks" value="345"/>
 <property name="sname" value="sai sree"/>
 <property name="branch" value="Dallas"/>
+<property name="course">
 
-
+ <list>
+<value>REACT</value>
+<value>JAVA</value>
+<value>AWS</value>
+<value>SELLINUM</value>
+  </list>
+  </property>
 </bean>
-
-
-
 </beans>        
