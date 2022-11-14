@@ -1,0 +1,14 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+<beans>
+
+
+<bean id ="sai" class="com.ex.Studen"> 
+
+<constructor-arg value = "1089"></constructor-arg>
+<constructor-arg value = "sai sree"></constructor-arg>
+<constructor-arg value = "35000"></constructor-arg>
+<constructor-arg value = "Dallas"></constructor-arg>
+</bean>
+</beans>        
