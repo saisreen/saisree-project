@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+<beans>
+
+
+<bean id ="Programming" class="com.ex.Category" autowire="byName">
+<property name="name" value="Logics"> </property> 
+</bean>
+
+<bean id ="bk" class="com.ex.Book">
+<property name="bookName" value="Kathy Sera Java"> </property> 
+<property name="bookPrice" value="5000"> </property> 
+<property name="bookAuthor" value="Kathy Sera"> </property> 
+</bean>
+
+
+
+</beans>        
