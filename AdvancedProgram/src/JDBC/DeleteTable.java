@@ -1,0 +1,33 @@
+package JDBC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DeleteTable {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3306/sai";
+		String UserName = "root";
+		String Password ="root";
+		Connection con = DriverManager.getConnection(url, UserName, Password);
+		Statement s = con.createStatement();
+		//String sql = "delete from hcl where employee_id =8";
+		//String sql = "delete from hcl"; 
+		 //(x!=0) for above for delete 
+		
+		String sqls = "drop table details "; 
+		int x = s.executeUpdate(sqls);
+		
+		
+		if (x!= 1) //drop the table details 
+			System.out.println("deleted successfully");
+		
+
+	}
+
+}
