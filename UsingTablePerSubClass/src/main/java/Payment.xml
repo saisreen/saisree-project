@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name = "com.exx.Payment" table = "payment">
+ <id name="id" column="pid">
+ <generator class="increment"></generator>
+ </id>
+ <property name="amount" column="amount" ></property>
+ 
+ <joined-subclass name="com.exx.Cheque" table="Cheque">
+ <key column ="pid"></key>
+ <property name="chequeType" column="chequetype"></property>
+ </joined-subclass>
+ 
+ <joined-subclass name="com.exx.CreditCard" table="CreditCard">
+  <key column ="pid"></key>
+ <property name="creditCardType" column="creditcardtype"></property>
+ </joined-subclass>
+ </class>
+</hibernate-mapping> 
