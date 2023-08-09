@@ -1,0 +1,29 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+<beans>
+
+
+<bean id ="emp" class="com.ex.Employee">
+
+
+<property name="id" value ="1"></property>
+<property name="name" value ="sai"></property>
+<property name="salary" value ="1000"></property>
+<property name="address" ref="empBean"></property>
+</bean>
+
+
+<bean id ="empBean" class="com.ex.Address">
+
+
+<property name="addId" value ="2"></property>
+<property name="city" value ="Dallas"></property>
+<property name="state" value ="Texas"></property>
+<property name="country" value ="USA"></property>
+
+</bean>
+
+
+
+</beans>

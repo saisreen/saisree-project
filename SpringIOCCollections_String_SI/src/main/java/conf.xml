@@ -1,0 +1,25 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+<beans>
+
+
+<bean id ="emp" class="com.ex.Employee">
+
+
+<property name="id" value ="1"></property>
+<property name="name" value ="sai"></property>
+<property name="salary" value ="1000"></property>
+<property name="mobile">
+<list>
+<value>12345677890</value>
+<value>0987654321</value>
+</list>
+</property>
+</bean>
+
+
+
+
+
+</beans>

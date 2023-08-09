@@ -1,0 +1,34 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+<beans>
+
+
+<bean id ="emp" class="com.ex.Employee">
+
+
+<constructor-arg value ="1"></constructor-arg>
+<constructor-arg value ="sai"></constructor-arg>
+<constructor-arg value ="1000"></constructor-arg>
+<constructor-arg>
+<map>
+<entry key-ref="mob" value-ref="lap"></entry>
+
+</map>
+</constructor-arg>
+</bean>
+
+<bean id ="mob" class="com.ex.Mobile">
+<constructor-arg value ="Apple"></constructor-arg>
+<constructor-arg value ="2000"></constructor-arg>
+</bean>
+
+<bean id ="lap" class="com.ex.Laptop">
+<constructor-arg value ="Dell"></constructor-arg>
+<constructor-arg value ="1000"></constructor-arg>
+</bean>
+
+
+
+
+</beans>
